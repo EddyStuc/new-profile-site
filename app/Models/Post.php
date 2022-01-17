@@ -54,6 +54,7 @@ class Post extends Model
         $converter = new CommonMarkConverter([], $environment);
 
         $post['title'] = $object->title;
+        $post['published'] = date("F j, Y", $object->published);
         $post['body'] = $converter->convertToHtml($object->body());
 
         return $post;

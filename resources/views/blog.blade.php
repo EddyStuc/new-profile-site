@@ -6,9 +6,13 @@
         @foreach ($posts as $post)
             <div class="bg-white w-3/4 h-80 mb-4 p-8 rounded-lg shadow-lg flex flex-col">
                 <h1 class="text-2xl font-bold">{{ $post['title'] }}</h1> <br>
-                {!! $post['body'] !!}
+                <div class="leading-relaxed mb-2">
+                    {!! $post['body'] !!}
+                </div>
+                <div class="font-semibold">
+                    {{ $post['published'] }}
+                </div>
             </div>
         @endforeach
-
     </div>
 </x-app-layout>

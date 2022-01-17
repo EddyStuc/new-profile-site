@@ -11,7 +11,7 @@ class BlogController extends Controller
     {
         $postClass = new Post;
 
-        $posts = $postClass->getLatest(5);
+        $posts = $postClass->getLatest(10);
 
         return view('blog', compact('posts'));
     }
