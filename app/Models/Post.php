@@ -18,6 +18,11 @@ class Post extends Model
     public $filenames;
     public $filesystem;
 
+    /**
+     * __construct filenames for markdown files
+     *
+     * @return void
+     */
     public function __construct() {
         $this->filenames = collect(File::allFiles(resource_path('posts')))
             ->sortByDesc(function ($file) {
@@ -30,6 +35,12 @@ class Post extends Model
             $this->filesystem = new Filesystem();
     }
 
+    /**
+     * get latest number of posts and return collection
+     *
+     * @param  mixed $limit
+     * @return void
+     */
     public function getLatest($limit)
     {
         $posts = [];
@@ -41,6 +52,12 @@ class Post extends Model
         return collect($posts);
     }
 
+    /**
+     * Yamlfrontmatter to parse the post to grab certain data
+     *
+     * @param  mixed $filename
+     * @return void
+     */
     public function getPostData($filename)
     {
         $file = $this->filesystem->get(resource_path('posts/' . $filename));

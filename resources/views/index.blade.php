@@ -1,13 +1,29 @@
 <x-app-layout>
     <div class="min-h-full w-full">
-        <div class="relative min-h-full bg-cover bg-center" style="background-image: url(/images/profile-home-laptop.png)">
-            {{-- <div class="flex flex-col justify-center items-center w-full h-screen text-white text-sm md:text-md lg:text-2xl">
-                <div class="mb-36 w-1/4">
-                    <p><span class="text-red-500">$person</span> = <span class="text-green-400">[</span>'name' <span class="text-blue-400">=></span> 'Ed Stuckey',</p>
-                    <p>'type' <span class="text-blue-400">=></span> 'Software Developer',</p>
-                    <p>'location' <span class="text-blue-400">=></span> 'Plymouth'<span class="text-green-400">]</span></p>
-                </div>
-            </div> --}}
+        <!--Normal homepage -->
+        <div class="hidden md:flex min-h-screen bg-cover bg-center" style="background-image: url(/images/profile-home-laptop.png)">
+        </div>
+
+        <!--Mobile homepage -->
+        <div class="flex flex-col md:hidden justify-center items-center w-full min-h-screen bg-gray-600 text-white text-2xl">
+            <div class="px-4">
+                <p><span class="text-red-500">$person</span> = <span class="text-green-400">[</span></p>
+                <p class="ml-4">'name' <span class="text-blue-400">=></span> 'Ed Stuckey',</p>
+                <p class="ml-4">'type' <span class="text-blue-400">=></span> 'Software Developer',</p>
+                <p class="ml-4">'location' <span class="text-blue-400">=></span> 'Plymouth'</p>
+                <p><span class="text-green-400">];</span></p>
+            </div>
+            <div class="flex space-x-4 mb-10 fixed bottom-0">
+                <a href="https://www.linkedin.com/in/ed-stuckey-674195219/" target="_blank">
+                    <x-icon name="linkedin" />
+                </a>
+                <a href="https://github.com/EddyStuc" target="_blank">
+                    <x-icon name="github" fill="white" />
+                </a>
+                <a href="https://www.instagram.com/ejstuckey/?h1=en" target="_blank">
+                    <x-icon name="instagram" />
+                </a>
+            </div>
         </div>
     </div>
 </x-app-layout>
