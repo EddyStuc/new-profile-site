@@ -1,5 +1,4 @@
 <x-app-layout>
-    <div class="flex flex-col min-h-screen bg-gray-100 w-full items-center justify-center">
         <div class="w-3/4 text-3xl my-4 text-indigo-800 font-bold border-b-2 border-gray-400">
             <h1>Blog</h1>
         </div>
@@ -14,5 +13,4 @@
                 </div>
             </div>
         @endforeach
-    </div>
 </x-app-layout>

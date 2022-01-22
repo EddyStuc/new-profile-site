@@ -1,4 +1,4 @@
-<div class="hidden md:flex flex-col shrink-0 min-h-screen bg-cover bg-top w-full md:w-64" style="background-image: url(/images/keyboard.jpeg)">
+<div class="hidden fixed md:flex flex-col shrink-0 min-h-screen bg-cover bg-top w-full md:w-60" style="background-image: url(/images/keyboard.jpeg)">
     <div class="hidden md:flex flex-col text-center md:text-left items-center md:items-start md:space-x-4">
         <x-nav-link :href="route('home')" :active="request()->routeIs('home')" class="text-5xl leading-normal">
             {{ __('Ed Stuckey') }}
@@ -17,26 +17,18 @@
             {{ __('Contact') }}
         </x-nav-link>
         <div class="flex mt-8 space-x-4">
-            <a href="https://www.linkedin.com/in/ed-stuckey-674195219/" target="_blank">
-                <x-icon name="linkedin" />
-            </a>
-            <a href="https://github.com/EddyStuc" target="_blank">
-                <x-icon name="github" fill="white" />
-            </a>
-            <a href="https://www.instagram.com/ejstuckey/?h1=en" target="_blank">
-                <x-icon name="instagram" />
-            </a>
+           @include('layouts.social')
         </div>
     </div>
 </div>
 
  <!--Mobile Home page nav menu-->
- <div class="md:hidden flex justify-between content-center items-center sm:ml-6 w-full p-4 fixed bg-indigo-400 rounded">
+ <div class="md:hidden relative flex flex-shrink-0 justify-between content-center items-center w-full p-4 bg-indigo-400">
      <a href="{{ route('home') }}" class="text-white font-bold text-2xl">Ed Stuckey</a>
-    <div class="flex flex-col items-end ">
+    <div class="flex flex-col items-end">
         <x-dropdown align="right">
             <x-slot name="trigger">
-                <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                <button class="flex items-center text-sm font-medium transition duration-150 ease-in-out">
                     <x-icon name="hamburger"/>
                 </button>
             </x-slot>

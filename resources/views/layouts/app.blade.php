@@ -15,9 +15,11 @@
         <style>[x-cloak] { display: none }</style>
     </head>
     <body>
-        <main class="flex min-h-screen w-screen">
+        <main class="flex flex-col md:flex-row min-h-screen w-screen">
             @include('layouts.navigation')
-            {{ $slot }}
+            <div class="flex flex-col min-h-screen bg-gray-100 w-full md:ml-60 items-center justify-center">
+                {{ $slot }}
+            </div>
         </main>
     </body>
         <!-- Scripts -->

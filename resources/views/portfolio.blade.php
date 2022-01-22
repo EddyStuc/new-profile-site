@@ -1,18 +1,17 @@
 <x-app-layout>
-    <div class="flex flex-col min-h-screen bg-gray-100 w-full items-center justify-center">
-        <div class="w-3/4 text-3xl mb-4 text-indigo-800 font-bold border-b-2 border-gray-400">
+        <div class="w-3/4 text-3xl mb-4 mt-2 text-indigo-800 font-bold border-b-2 border-gray-400">
             <h1>Portfolio - A sample of work</h1>
         </div>
 
         <!-- Project 1 -->
-        <div class="bg-white w-3/4 h-80 rounded-lg shadow-lg flex items-center p-4 mb-4"
+        <div class="bg-white md:w-3/4 rounded-lg shadow-lg flex flex-col xl:flex-row items-center p-4 mb-4 mx-2"
             x-data="{ 'showBuilding': false, image: 'noticeboard-code' }"
             @keydown.escape="showBuilding = false"
         >
-            <img src="/images/building-management.png" class="h-60 shadow-md mr-8" alt="building-management">
-            <div class="h-full leading-loose">
+            <img src="/images/building-management.png" class="h-60 shadow-md xl:mr-8" alt="building-management">
+            <div class="h-full leading-loose mt-2">
                 <button type="button"
-                        class="font-semibold text-xl text-gray-600 border-b-2 mb-4 hover:text-indigo-700"
+                        class="font-semibold text-xl text-indigo-400 border-b-2 mb-4 hover:text-indigo-700"
                         @click="showBuilding = true"
                 >
                 Building Management Website
@@ -31,7 +30,7 @@
             </div>
 
             <!-- Modal project 1-->
-            <div class="absolute inset-0 rounded z-30 m-auto h-5/6 w-4/6 overflow-y-scroll bg-black bg-opacity-50"
+            <div class="fixed inset-0 rounded z-30 m-auto h-5/6 w-5/6 overflow-y-scroll"
                 x-show="showBuilding"
                 x-cloak
             >
@@ -54,14 +53,14 @@
         </div>
 
         <!-- Project 2-->
-        <div class="bg-white w-3/4 h-80 rounded-lg shadow-lg flex items-center p-4"
+        <div class="bg-white md:w-3/4 rounded-lg shadow-lg flex flex-col xl:flex-row items-center p-4 mx-2"
             x-data="{ 'showTodo': false, image: 'todoApp' }"
             @keydown.escape="showTodo = false"
         >
-            <img src="/images/todoApp.png" class="h-60 shadow-md mr-8" alt="todoApp">
-        <div class="h-full leading-loose">
+            <img src="/images/todoApp.png" class="h-60 shadow-md xl:mr-8" alt="todoApp">
+        <div class="h-full leading-loose mt-2">
             <button type="button"
-                    class="font-semibold text-xl text-gray-600 border-b-2 mb-4 hover:text-indigo-700"
+                    class="font-semibold text-xl text-indigo-400 border-b-2 mb-4 hover:text-indigo-700"
                     @click="showTodo = true"
             >
             Todo App AlpineJS
@@ -80,7 +79,7 @@
         </div>
 
         <!-- Modal project 2-->
-        <div class="absolute inset-0 rounded z-30 m-auto h-5/6 w-4/6 overflow-y-scroll bg-black bg-opacity-50"
+        <div class="fixed inset-0 rounded z-30 m-auto h-5/6 w-5/6 overflow-y-scroll"
             x-show="showTodo"
             x-cloak
         >
@@ -91,7 +90,7 @@
                         @click="showTodo = false">
                         &#9587;
                 </button>
-                <img src="/images/todoApp.png" class="rounded" alt="code screenshot" x-show="image === 'todoApp'">
+                <img src="/images/todoApp.png" class="rounded mx-auto" alt="code screenshot" x-show="image === 'todoApp'">
                 <img src="/images/todoPHP.png" class="rounded" alt="code screenshot" x-show="image === 'todoPHP'">
                 <img src="/images/todoJS.png" class="rounded" alt="code screenshot" x-show="image === 'todoJS'">
 
@@ -100,7 +99,5 @@
                 <x-model-pic-button imageName="todoJS">3</x-model-pic-button>
             </div>
         </div>
-
         </div>
-    </div>
 </x-app-layout>

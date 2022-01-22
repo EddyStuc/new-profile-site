@@ -1,14 +1,13 @@
 <x-app-layout>
-    <div class="flex flex-col min-h-screen bg-gray-100 w-full items-center justify-center">
-        <div class="w-3/4 text-3xl mb-4 text-indigo-800 font-bold border-b-2 border-gray-400">
+        <div class="w-3/4 text-3xl mb-4 mt-2 text-indigo-800 font-bold border-b-2 border-gray-400">
             <h1>About Me</h1>
         </div>
-        <div class="bg-white w-3/4 h-96 rounded-lg shadow-lg">
-            <div class="mx-12 mt-6">
+        <div class="bg-white w-3/4 rounded-lg shadow-lg">
+            <div class="mx-12 mt-6 text-center">
                 <h2 class="font-semibold text-2xl">I'm Ed Stuckey</h2>
             </div>
-            <div class="flex p-8 leading-loose items-center">
-                <img src="/images/profile-pic.png" class="h-52 rounded-2xl mx-4" alt="author">
+            <div class="p-4 leading-loose items-center">
+                <img src="/images/profile-pic.png" class="h-52 rounded-2xl md:float-left mx-auto md:mx-4" alt="author">
                 <p>I'm 31 years old and based in Plymouth, UK. For the past 12 years I've
                     been a gas and heating engineer but have decided to make the change in my
                     career to become a self-taught software developer.<br/>
@@ -21,7 +20,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex mt-8">
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 mt-8">
             <x-fact-container>
                 <x-icon name="dollar"/>
                 <h4 class="font-bold text-xl my-2">Investor</h4>
@@ -45,5 +44,4 @@
                 <h5>Number of toilets fixed</h5>
             </x-fact-container>
         </div>
-    </div>
 </x-app-layout>
