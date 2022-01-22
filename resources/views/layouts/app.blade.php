@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <style>[x-cloak] { display: none }</style>
     </head>
-    <body>
-        <main class="flex flex-col md:flex-row min-h-screen w-screen">
+    <body class="">
+        <main class="flex flex-col md:flex-row min-h-screen md:h-fit w-screen">
             @include('layouts.navigation')
-            <div class="flex flex-col min-h-screen bg-gray-100 w-full md:ml-60 items-center justify-center">
+            <div class="flex flex-col grow bg-gray-100 w-full md:ml-60 items-center justify-center pb-2 ">
                 {{ $slot }}
             </div>
         </main>

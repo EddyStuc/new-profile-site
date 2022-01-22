@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="h-full w-full flex md:flex-col grow">
+    <div class="w-full flex md:flex-col grow">
         <!--Normal homepage -->
         <div class="hidden md:flex min-h-screen bg-cover bg-center" style="background-image: url(/images/profile-home-laptop.png)">
         </div>

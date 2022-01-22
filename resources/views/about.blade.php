@@ -8,8 +8,7 @@
             </div>
             <div class="p-4 leading-loose items-center">
                 <img src="/images/profile-pic.png" class="h-52 rounded-2xl md:float-left mx-auto md:mx-4" alt="author">
-                <p>I'm 31 years old and based in Plymouth, UK. For the past 12 years I've
-                    been a gas and heating engineer but have decided to make the change in my
+                <p> I'm currently based in Plymouth, UK and for the past 12 years I've been a gas and heating engineer but have decided to make the change in my
                     career to become a self-taught software developer.<br/>
                     I began my journey learning through Freecodecamp and then worked through the Harvard CS50x
                     course mixing in little side projects along the way.<br/>
