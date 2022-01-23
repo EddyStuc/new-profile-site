@@ -12,6 +12,3 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact', [ContactController::class, 'create'])->name('contact.create');
 
 Route::get('blog', [BlogController::class, 'index'])->name('blog');
-
-
-
