@@ -4,6 +4,7 @@
 ])
 
 <form method="{{ $method === 'GET' ? 'GET' : 'POST' }}"
+        netlify
         action="{{ $action }}"
         {{ $attributes }}
 >

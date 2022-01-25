@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Ed Stuckey') }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -17,7 +17,7 @@
     <body class="">
         <main class="flex flex-col md:flex-row min-h-screen md:h-fit w-screen">
             @include('layouts.navigation')
-            <div class="flex flex-col grow bg-gray-100 w-full md:ml-60 items-center justify-center pb-2 ">
+            <div class="flex flex-col grow bg-gray-100 w-full md:ml-60 items-center justify-center ">
                 {{ $slot }}
             </div>
         </main>

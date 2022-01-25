@@ -53,7 +53,7 @@
         </div>
 
         <!-- Project 2-->
-        <div class="bg-white md:w-3/4 rounded-lg shadow-lg flex flex-col xl:flex-row items-center p-4 mx-2"
+        <div class="bg-white md:w-3/4 rounded-lg shadow-lg flex flex-col xl:flex-row items-center p-4 mx-2 mb-2"
             x-data="{ 'showTodo': false, image: 'todoApp' }"
             @keydown.escape="showTodo = false"
         >

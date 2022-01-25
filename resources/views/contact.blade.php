@@ -4,14 +4,16 @@
         </div>
         <div class="bg-white flex flex-col w-4/5 p-4 rounded-lg shadow-lg">
 
-            <x-form.layout action="{{ route('contact.create') }}">
+            {{-- <x-form.layout action="{{ route('contact.create') }}"> --}}
+            <form netlify>
                 <x-form.input name="name"/>
                 <x-form.input name="subject"/>
                 <x-form.input name="email" type="email"/>
                 <x-form.textarea name="message" placeholder="Enter your message.."/>
 
                 <x-button >Send Message</x-button>
-            </x-form.layout>
+            </form>
+            {{-- </x-form.layout> --}}
 
         </div>
 </x-app-layout>
