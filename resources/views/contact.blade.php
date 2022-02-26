@@ -6,6 +6,7 @@
 
             {{-- <x-form.layout action="{{ route('contact.create') }}"> --}}
             <form netlify>
+                @csrf
                 <x-form.input name="name"/>
                 <x-form.input name="subject"/>
                 <x-form.input name="email" type="email"/>
